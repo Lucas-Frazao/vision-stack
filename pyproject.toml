@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vision-stack"
+version = "0.1.0"
+description = "CPU-first perception pipeline for a humanoid vision sprint"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy==2.4.6",
+    "opencv-python==4.14.0.94",
+    "PyYAML==6.0.3",
+    "ultralytics==8.4.173",
+]
+
+[project.scripts]
+vision-pipeline = "vision_stack.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

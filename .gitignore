@@ -1,0 +1,26 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# Generated perception artifacts and downloaded weights.
+outputs/*
+!outputs/.gitkeep
+*.pt
+*.onnx
+*.engine
+runs/
+weights/
+models/*.caffemodel
+models/*.prototxt
+models/*.pb
+models/*.pbtxt
+
+.DS_Store
+.ultralytics/

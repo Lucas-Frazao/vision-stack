@@ -1,0 +1,19 @@
+# Day-1 defaults. CLI flags override environment variables, which override this file.
+# VISION_STACK_DEVICE, VISION_STACK_MODEL, VISION_STACK_SOURCE, VISION_STACK_BACKEND.
+
+device: cpu
+model: yolov8n.pt
+backend: yolo
+confidence: 0.25
+imgsz: 640
+
+# 0 reads the whole file, or the webcam until Ctrl+C.
+max_frames: 0
+
+# Checked-in synthetic clip so the first run does not need a camera.
+source: data/sample/synthetic_demo.mp4
+output_dir: outputs
+
+# Used only when backend is mobilenet_ssd. See scripts/download_mobilenet_ssd.py.
+mobilenet_prototxt: models/mobilenet_ssd.prototxt
+mobilenet_weights: models/mobilenet_ssd.caffemodel

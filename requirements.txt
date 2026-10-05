@@ -1,0 +1,8 @@
+# Direct dependencies only. Ultralytics installs torch and torchvision;
+# pip selects the wheel for this OS, so a Mac stays on the default macOS build.
+# numpy 2.4 with opencv 4.14 is the set that resolves on both macOS and Linux
+# under ultralytics 8.4 (opencv 4.12 requires numpy<2.3, which 8.4 rejects on macOS).
+numpy==2.4.6
+opencv-python==4.14.0.94
+PyYAML==6.0.3
+ultralytics==8.4.173
